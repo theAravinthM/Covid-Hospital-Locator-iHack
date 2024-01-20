@@ -1,7 +1,7 @@
 import json
 from difflib import get_close_matches
 
-jsonfile = json.load(open("C:/Users/Aravinth/Downloads/data1.json"))
+jsonfile = json.load(open(r"./data1.json"))
 word = input("enter the location: ")
 
 def check(d):
@@ -20,6 +20,7 @@ def check(d):
         return "The location doesn't exist, please enter the correct location"
 
 result = (check(word))
+print("\n\nThe available hostpitals are:")
 if type(result) == list:
     for i in result:
         print(i)
